@@ -1,0 +1,56 @@
+﻿<Window x:Class="MakeBlog.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MakeBlog"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem x:Name="Tab_Header" Header="Header">
+                <Grid Background="#FFE5E5E5">
+                    <TextBlock HorizontalAlignment="Left" FontSize="18" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="36"><Run Language="ja-jp" Text="Title"/></TextBlock>
+                    <TextBox x:Name="Main_Title" HorizontalAlignment="Left" Margin="117,13,0,0" Text="ここにタイトル" TextWrapping="Wrap" VerticalAlignment="Top" Width="642" Height="21"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.325,1.195"><Run Text="T"/><Run Text="witterL"/><Run Language="ja-jp" Text="abel"/></TextBlock>
+                    <TextBlock HorizontalAlignment="Left" FontSize="18" Margin="10,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="41"><Run Language="ja-jp" Text="Card"/><LineBreak/><Run Language="ja-jp"/></TextBlock>
+                    <TextBox x:Name="Tw_Card" HorizontalAlignment="Left" Margin="117,120,0,0" Text="summary" TextWrapping="Wrap" VerticalAlignment="Top" Width="642" Height="21"/>
+                    <TextBlock HorizontalAlignment="Left" FontSize="18" Margin="10,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="63"><Run Language="ja-jp" Text="Creater"/><LineBreak/><Run Language="ja-jp"/></TextBlock>
+                    <TextBox x:Name="Tw_Creater" HorizontalAlignment="Left" Margin="117,146,0,0" Text="@reiuniv" TextWrapping="Wrap" VerticalAlignment="Top" Width="642" Height="21"/>
+                    <TextBlock HorizontalAlignment="Left" FontSize="18" Margin="10,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="36"><Run Language="ja-jp" Text="Title"/></TextBlock>
+                    <TextBox x:Name="Tw_Title" HorizontalAlignment="Left" Margin="117,172,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="642" Height="21"/>
+                    <TextBlock HorizontalAlignment="Left" FontSize="18" Margin="10,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="102"><Run Language="ja-jp" Text="Description"/><LineBreak/><Run/></TextBlock>
+                    <TextBox x:Name="Tw_Description" HorizontalAlignment="Left" Margin="117,198,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="642" Height="21"/>
+                    <TextBlock HorizontalAlignment="Left" FontSize="18" Margin="10,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="63"><Run Language="ja-jp" Text="カテゴリ"/><LineBreak/><Run Language="ja-jp"/></TextBlock>
+                    <TextBox x:Name="Main_Category" HorizontalAlignment="Left" Margin="117,37,0,0" Text="カテゴリ" TextWrapping="Wrap" VerticalAlignment="Top" Width="642" Height="21"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem x:Name="Tab_Main" Header="Main">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="Txt_Main" HorizontalAlignment="Center" Margin="0,42,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="774" Height="354" AcceptsReturn="True" />
+
+
+
+                    <Button x:Name="Btn_Color" Content="Color" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="27" Width="50" Click="Button_Click_Color"/>
+                    <Button x:Name="Btn_Url" Content="URL" HorizontalAlignment="Left" Margin="65,10,0,0" VerticalAlignment="Top" Height="27" Width="50" Click="Button_Click_Url"/>
+                    <Button x:Name="Btn_Image" Content="Image" HorizontalAlignment="Left" Margin="120,10,0,0" VerticalAlignment="Top" Height="27" Width="50" Click="Button_Click_Image"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Tab_Image" Header="Image" HorizontalAlignment="Center" Width="45">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="File_IN" Content="ファイル入力" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="File_Click" Height="28" Width="73"/>
+                    <ListBox x:Name="File_List" Margin="0,43,0,0"/>
+                    <Button x:Name="Img_Delete" Content="削除" HorizontalAlignment="Left" Margin="107,10,0,0" VerticalAlignment="Top" Click="List_Delete" Height="28" Width="62"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Tab_OUT" Header="出力">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="Main_Out" Content="出力" FontSize="18" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="39" Width="58" Click="Main_Out_Click"/>
+                    <TextBox x:Name="Main_OutText" HorizontalAlignment="Center" Margin="0,54,0,0" Text="ここに出力" TextWrapping="Wrap" VerticalAlignment="Top" Width="774" Height="342"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
