@@ -28,7 +28,7 @@
 
             <TabItem x:Name="Tab_Main" Header="Main">
                 <Grid Background="#FFE5E5E5">
-                    <TextBox x:Name="Txt_Main" HorizontalAlignment="Center" Margin="0,42,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="774" Height="354" AcceptsReturn="True" />
+                    <TextBox x:Name="Txt_Main" FontSize="15" HorizontalAlignment="Center" Margin="0,42,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="774" Height="354" AcceptsReturn="True" />
 
 
 

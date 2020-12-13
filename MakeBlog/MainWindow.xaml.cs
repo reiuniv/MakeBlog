@@ -33,20 +33,22 @@ namespace MakeBlog
 
         private void Button_Click_Url(object sender, RoutedEventArgs e)
         {
-
+            var urlwin = new URLWindow();
+            urlwin.Show();
         }
 
         private void Button_Click_Image(object sender, RoutedEventArgs e)
         {
-
+            var imgwin = new ImageWindow();
+            imgwin.Show();
         }
 
         private void Main_Out_Click(object sender, RoutedEventArgs e)
         {
-
-            string v = "ボタンを押したな？\n" + Main_Title.Text + "\n";
             string maintext = Txt_Main.Text;
             maintext = maintext.Replace("\r\n", "<br>\n");
+
+            string v = Main_Title.Text + "\n";
             Main_OutText.Text = v + maintext;
         }
 
