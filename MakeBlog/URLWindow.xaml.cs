@@ -27,18 +27,18 @@ namespace MakeBlog
         {
             string str = URL_URL.Text;
             URL_Title.Text = str;
-            URL_Title.IsReadOnly = true;
+            //URL_Title.IsReadOnly = true;
         }
         private void URL_Check_Unchecked(object sender, RoutedEventArgs e)
         {
-            URL_Title.IsReadOnly = false;
+            //URL_Title.IsReadOnly = false;
         }
 
         private void URL_Out_Click(object sender, RoutedEventArgs e)
         {
             var Mainwin = new MakeBlog.MainWindow();
-            string str = "<a class=\"url-link\" href=\""+ URL_URL.Text+ "\">";
-            Mainwin.Txt_Main.Text = str;
+            string str = "<a class=\"url-link\" href=\"" + URL_URL.Text + "\">" + URL_Title.Text + "</a>";
+            Mainwin.Txt_Main.AppendText(str);
             Debug.Print(str);
             Close();
         }

@@ -21,5 +21,10 @@ namespace MakeBlog
         {
             InitializeComponent();
         }
+
+        private void Image_List_Window_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

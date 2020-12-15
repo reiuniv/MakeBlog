@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace MakeBlog
 {
@@ -41,6 +42,10 @@ namespace MakeBlog
         {
             var imgwin = new ImageWindow();
             imgwin.Show();
+            Debug.Print(File_List.Name);
+            imgwin.Image_List_Window.Items.Add(File_List.Items);
+            Debug.Print(File_List.Name);
+            Debug.Print((string)File_List.SelectedItem);
         }
 
         private void Main_Out_Click(object sender, RoutedEventArgs e)
@@ -72,11 +77,11 @@ namespace MakeBlog
                 {
                     // ファイルパスからファイル名を取得
                     string strFileName = System.IO.Path.GetFileName(strFilePath);
-
-                    // リストボックスにファイル名を表示
-                    File_List.Items.Add(strFileName);
-                }
-            
+                Debug.Print(strFileName);
+                // リストボックスにファイル名を表示
+                File_List.Items.Add(strFileName);
+            }
+            Debug.Print((string)File_List.SelectedItem);
 
         }
 
