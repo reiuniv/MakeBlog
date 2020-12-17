@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
+using static System.Console;
 
 namespace MakeBlog
 {
@@ -36,16 +37,17 @@ namespace MakeBlog
         {
             var urlwin = new URLWindow();
             urlwin.Show();
+            //Txt_Main.AppendText("TEST");
         }
 
         private void Button_Click_Image(object sender, RoutedEventArgs e)
         {
             var imgwin = new ImageWindow();
             imgwin.Show();
-            Debug.Print(File_List.Name);
-            imgwin.Image_List_Window.Items.Add(File_List.Items);
-            Debug.Print(File_List.Name);
-            Debug.Print((string)File_List.SelectedItem);
+            //Debug.Print(File_List.Name);
+            //imgwin.Image_List_Window.Items.Add(File_List.Items);
+            //Debug.Print(File_List.Name);
+            //Debug.Print((string)File_List.SelectedItem);
         }
 
         private void Main_Out_Click(object sender, RoutedEventArgs e)
@@ -60,6 +62,7 @@ namespace MakeBlog
         private void File_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
+            var imgwin = new ImageWindow();
             // ★★★複数のファイルを選択できるようにするかどうかの設定★★★
             openFileDialog.Multiselect = true;
 
@@ -80,6 +83,7 @@ namespace MakeBlog
                 Debug.Print(strFileName);
                 // リストボックスにファイル名を表示
                 File_List.Items.Add(strFileName);
+                imgwin.Image_List_Window.Items.Add(strFileName);
             }
             Debug.Print((string)File_List.SelectedItem);
 

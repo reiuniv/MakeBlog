@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace MakeBlog
 {
@@ -20,6 +21,10 @@ namespace MakeBlog
         public ImageWindow()
         {
             InitializeComponent();
+            MainWindow Mainwin = (MainWindow)Application.Current.MainWindow;
+            Image_List_Window.Items.Add(Mainwin.File_List.Items);
+            Debug.Print((string)Mainwin.File_List.SelectedItem);
+
         }
 
         private void Image_List_Window_SelectionChanged(object sender, SelectionChangedEventArgs e)

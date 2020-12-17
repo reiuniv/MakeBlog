@@ -36,10 +36,12 @@ namespace MakeBlog
 
         private void URL_Out_Click(object sender, RoutedEventArgs e)
         {
-            var Mainwin = new MakeBlog.MainWindow();
+            MainWindow Mainwin = (MainWindow)Application.Current.MainWindow;
             string str = "<a class=\"url-link\" href=\"" + URL_URL.Text + "\">" + URL_Title.Text + "</a>";
             Mainwin.Txt_Main.AppendText(str);
             Debug.Print(str);
+            Debug.Print(Mainwin.Txt_Main.Text);
+
             Close();
         }
     }
