@@ -22,8 +22,6 @@ namespace MakeBlog
         {
             InitializeComponent();
             MainWindow Mainwin = (MainWindow)Application.Current.MainWindow;
-            Image_List_Window.Items.Add(Mainwin.File_List.Items);
-            Debug.Print((string)Mainwin.File_List.SelectedItem);
 
         }
 

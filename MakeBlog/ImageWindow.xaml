@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="ImageWindow" Height="450" Width="600">
     <Grid>
-        <ListBox x:Name="Image_List_Window" SelectionChanged="Image_List_Window_SelectionChanged"/>
-
+        <DataGrid x:Name="Image_List_Window"/>
     </Grid>
 </Window>
