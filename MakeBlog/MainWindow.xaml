@@ -37,14 +37,8 @@
                     <Button x:Name="Btn_Image" Content="Image" HorizontalAlignment="Left" Margin="120,10,0,0" VerticalAlignment="Top" Height="27" Width="50" Click="Button_Click_Image"/>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="Tab_Image" Header="Image" HorizontalAlignment="Center" Width="45">
-                <Grid Background="#FFE5E5E5">
-                    <Button x:Name="File_IN" Content="ファイル入力" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="File_Click" Height="28" Width="73"/>
-                    <Button x:Name="Img_Delete" Content="削除" HorizontalAlignment="Left" Margin="107,10,0,0" VerticalAlignment="Top" Click="List_Delete" Height="28" Width="62"/>
-                    <DataGrid Name="File_List" Margin="10,52,10,10"/>
-                    
-                </Grid>
-            </TabItem>
+  
+            
             <TabItem x:Name="Tab_OUT" Header="出力">
                 <Grid Background="#FFE5E5E5">
                     <Button x:Name="Main_Out" Content="出力" FontSize="18" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="39" Width="58" Click="Main_Out_Click"/>

@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MakeBlog"
         mc:Ignorable="d"
-        Title="ImageWindow" Height="450" Width="600">
+        Title="ImageWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="Image_List_Window"/>
+        <Button x:Name="File_IN" Content="ファイル入力" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="File_Click" Height="28" Width="73"/>
+        <Button x:Name="Img_Delete" Content="削除" HorizontalAlignment="Left" Margin="107,10,0,0" VerticalAlignment="Top" Click="List_Delete" Height="28" Width="62"/>
+        <DataGrid x:Name="Image_List_Window" Height="391" VerticalAlignment="Top" Margin="0,43,0,0" SelectionChanged="Image_List_Window_SelectionChanged" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+            <DataGridTemplateColumn IsReadOnly="True" Header="選択">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <CheckBox x:Name="Send" IsChecked="{Binding IsSelected.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                      HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+            
+                
+                <DataGridTextColumn Binding="{Binding Name}" ClipboardContentBinding="{x:Null}" Header="ファイル名" IsReadOnly="True" Width="150"/>
+                <DataGridTextColumn Binding="{Binding Path}" ClipboardContentBinding="{x:Null}" Header="パス" IsReadOnly="True" Width="400"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="Image_Send" Content="送信" HorizontalAlignment="Left" Margin="188,10,0,0" VerticalAlignment="Top" Height="29" Width="76" Click="Image_Send_Click"/>
     </Grid>
 </Window>
